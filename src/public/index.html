@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Testes API</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header><h1>Testes de API</h1></header>
+        <main>
+            <section>
+                <div class="verb">GET</div>
+                <ul>
+                    <li><a href="/products">/products</a></li>
+                    <li><a href="/products/1">/products/1</a></li>
+                    <li><a href="/products/2">/products/2</a></li>
+                </ul>
+            </section>
+            <section>
+                <div class="verb">POST</div>
+                <form form action="/products" method="post">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="" />
+                    <label for="description">Descrição:</label>
+                    <input type="text" name="description" id="" />
+                    <input type="submit" value="Criar Produto" />
+                </form>
+            </section>
+            <section>
+                <div class="verb">PUT</div>
+                <form form action="/products" method="put">
+                    <label for="_Id">_Id:</label>
+                    <input type="text" name="_Id" id="" disabled />
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="" disabled />
+                    <label for="description">Descrição:</label>
+                    <input type="text" name="description" id="" disabled />
+                    <input type="submit" value="Editar Produto" disabled />
+                </form>
+            </section>
+            <section>
+                <div class="verb">DELETE</div>
+            </section>
+        </main>
+        <footer><h2>Copyright 2021</h2></footer>
+    </body>
+</html>

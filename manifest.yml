@@ -1,0 +1,6 @@
+applications:
+    - name: teste-nodejs12345
+      # random-route: true
+      routes:
+          - route: teste-nodejs12345
+      memory: 64M
