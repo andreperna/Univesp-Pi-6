@@ -1,5 +1,5 @@
 applications:
-    - name: teste-nodejs12345
+    - name: teste-nodejs123456789
       random-route: true
       #   routes:
       #   - route: teste-nodejs12345
