@@ -5,10 +5,10 @@ const { getNextSequence } = require("../lib/getNextSequence");
 const { Database } = require("../config/db");
 
 //Define collection and nameId for use
-const collection = "products";
-const nameId = "productId";
+const collection = "locations";
+const nameId = "locationId";
 
-module.exports = class ProductModel {
+module.exports = class LocationModel {
     static async getAll() {
         const db = await Database.db;
         const result = await db.collection(collection).find().toArray();

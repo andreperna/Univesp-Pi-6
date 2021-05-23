@@ -17,6 +17,7 @@ Database.connect();
 app.use(express.static("./src/public"));
 
 //---------- Rotas
-app.use("/products", require("./src/routes/productsRoute"));
+// app.use("/products", require("./src/routes/productsRoute"));
+app.use("/", require("./src/routes/index"));
 
 module.exports = app;
