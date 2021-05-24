@@ -13,12 +13,15 @@ module.exports = class ProductController {
         console.log(result);
         res.status(200).send(result);
     }
-
+// momento onde iremos salvar os produtos
     static async store(req, res) {
         const object = req.body;
         const result = await ProductModel.create(object);
         console.log(result);
-        res.status(201).send(result);
+        alert('ok');
+        // res.send("ok")
+        // res.status(201).send(result);
+        return;
     }
 
     static async update(req, res) {

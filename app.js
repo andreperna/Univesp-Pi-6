@@ -13,10 +13,25 @@ app.set("json spaces", 4);
 //---------- Conectando ao Banco de Dados
 Database.connect();
 
+//---------- RENOMEAR/TIRAR
+//---------- Rota INDEX
+app.get("/", (req, res)=>{
+    res.sendfile("./src/public/home.html")
+})
+
 //---------- Arquivos Estaticos
 app.use(express.static("./src/public"));
 
-//---------- Rotas
+//---------- Rotas API
 app.use("/products", require("./src/routes/productsRoute"));
+
+//---------- Rotas VIEWS
+const ejs = require('ejs')
+app.set('view engine', "ejs")
+app.set("views", "./views")
+app.use("/products-view", require("./src/routes/productsRouteView"));
+
+
+
 
 module.exports = app;
