@@ -1,6 +1,6 @@
 applications:
     - name: univesp-pi-6
-      random-route: true
-      #   routes:
-      #   - route: teste-nodejs12345
+      # random-route: true
+        routes:
+        - route: univesp-pi-6
       memory: 128M
