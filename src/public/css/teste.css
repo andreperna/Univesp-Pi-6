@@ -119,6 +119,8 @@ footer {
         font-weight: bold;
         box-shadow: 2px 2px 2px var(--cor-header-footer);
         /* border: 3px dashed var(--cor-header-footer); */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
     }
     form {
         /* background-color: blueviolet; */
@@ -127,3 +129,14 @@ footer {
         padding-top: 0.5rem;
     }
 
+    .link2{
+        color: var(--cor-text-HF);
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }

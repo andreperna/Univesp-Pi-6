@@ -1,0 +1,89 @@
+###------------ GET ALL
+###----- users
+GET http://localhost:3000/users HTTP/1.1
+
+###----- products
+GET http://localhost:3000/products HTTP/1.1
+
+###----- locations
+GET http://localhost:3000/locations HTTP/1.1
+
+###----- assets
+GET http://localhost:3000/assets HTTP/1.1
+
+
+
+###------------ GET BY ID
+###----- users
+GET http://localhost:3000/users/2 HTTP/1.1
+
+###----- products
+GET http://localhost:3000/products/2 HTTP/1.1
+
+###----- locations
+GET http://localhost:3000/locations/2 HTTP/1.1
+
+###----- assests
+GET http://localhost:3000/assets/2 HTTP/1.1
+
+
+
+###------------ CREATE
+###----- users
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+  "name": "teste",
+  "birthDate": "07/05/1978",
+  "phone": "16989997715"
+}
+
+###----- products
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+  "name": "teste",
+  "description": "teste"
+}
+
+###----- locations
+POST http://localhost:3000/locations HTTP/1.1
+content-type: application/json
+
+{
+  "name": "teste",
+  "shortName": "teste",
+  "description": "Sala de aula para 16 alunos",
+  "responsible (user-id)": "1"
+}
+
+###----- assets
+POST http://localhost:3000/assets HTTP/1.1
+content-type: application/json
+
+{
+  "product (product-id)": "teste",
+  "location (location-id-id)": "teste",
+  "aquisitionDate": "16/05/2021"
+}
+
+
+
+###------------ UPDATE BY ID
+###----- products
+PUT http://localhost:3000/products/66 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "teste-put",
+  "description": "teste-put"
+}
+
+
+
+###------------ DELETE BY ID
+###----- products
+
+DELETE  http://localhost:3000/products/62 HTTP/1.1

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ProductControllerView = require("../controllers/ProductControlerView");
+const ProductControllerView = require("../controllers/ProductControllerView");
 
 
 router.get("/", ProductControllerView.index);

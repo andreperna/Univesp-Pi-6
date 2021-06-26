@@ -13,13 +13,15 @@
                 const msgBoxSpan = document.getElementById("msg-span")
                 const msgBoxSpanC = document.getElementById("msg-spanC")
                 const txtName = document.getElementById("txt-name")
-                const txtDesc = document.getElementById("txt-desc")
+                const txtBirth = document.getElementById("txt-birth")
+                const txtPhone= document.getElementById("txt-phone")
 
                 msgBox.classList.remove("hidden")
 
                 const myBody = {
                     name: txtName.value,
-                    description: txtDesc.value
+                    birthDate: txtBirth.value,
+                    phone: txtPhone.value
                 }
 
                 let myInit = {
@@ -31,13 +33,13 @@
                     body: JSON.stringify(myBody)
                 }
             
-                fetch("/products", myInit)
+                fetch("/users", myInit)
                     .then(resp => {
                         console.log(resp)
                         if (resp.status === 201){
-                            msgBoxSpan.innerHTML = "Item Cadastrado com Sucesso!!!"
+                            msgBoxSpan.innerHTML = "Usuário Cadastrado com Sucesso!!!"
                         }else{
-                            msgBoxSpanC.innerHTML = "Item NÃO Cadastrado!!!" 
+                            msgBoxSpanC.innerHTML = "Usuário NÃO Cadastrado!!!" 
                             var x = document.getElementById("snackbar");
                             x.className = "show";
                             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
@@ -94,7 +96,7 @@
             
 
 
-            <form form action="/products" method="post">
+            <form form action="/users" method="post">
                 <div class="text"> 
                     <label for="name">Nome:</label>
                 </div>
@@ -102,10 +104,16 @@
                     <input class="link" type="text" name="name" id="txt-name" />
                 </div>
                 <div class="text"> 
-                    <label for="description">Descrição:</label>
+                    <label for="birthDate">Data de Nascimento:</label>
                 </div>
                 <div class="text"> 
-                    <input class="link" type="text" name="description" id="txt-desc" />
+                    <input class="link" type="text" name="birthDate" id="txt-birth" />
+                </div>
+                <div class="text"> 
+                    <label for="phone">Telefone:</label>
+                </div>
+                <div class="text"> 
+                    <input class="link" type="text" name="phone" id="txt-phone" />
                 </div>
                 <div class="text"> 
                     <input type="button" onclick="fCadastro()" value="Cadastrar" />
