@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastrar Local</title>
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <script>
+            function fCadastro(){
+                const msgBox = document.getElementById("msg")
+                const msgBoxSpan = document.getElementById("msg-span")
+                const msgBoxSpanC = document.getElementById("msg-spanC")
+                const txtName = document.getElementById("txt-name")
+                const txtSname= document.getElementById("txt-sName")
+                const txtDesc = document.getElementById("txt-desc")
+                const cbxResp = document.getElementById("cbx-resp")
+
+                msgBox.classList.remove("hidden")
+
+                const myBody = {
+                    name: txtName.value,
+                    shortName: txtSname.value,
+                    description: txtDesc.value,
+                    // cbx puxar combobox
+                    responsibleId: cbxResp.value
+
+                }
+
+                let myInit = {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(myBody)
+                }
+            
+                fetch("/locations", myInit)
+                    .then(resp => {
+                        console.log(resp)
+                        if (resp.status === 201){
+                            msgBoxSpan.innerHTML = "Usuário Cadastrado com Sucesso!!!"
+                        }else{
+                            msgBoxSpanC.innerHTML = "Usuário NÃO Cadastrado!!!" 
+                            var x = document.getElementById("snackbar");
+                            x.className = "show";
+                            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+                        }                        
+                    })
+                    .catch(resp => console.log(resp))
+            }
+            
+
+        </script>
+        <script src="https://kit.fontawesome.com/7ffbd92234.js" crossorigin="anonymous"></script> 
+    </head>
+    <body>
+        <style>
+            .msg-box{
+                background-color: greenyellow;
+                border-radius: .5rem;
+                width: 450x;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hidden{
+                visibility: hidden;
+            }
+
+            #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+            }
+
+            #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+        </style>
+
+        <header><h1>Cadastrar Local</h1></header>
+        <main>   
+                <form form action="/locations" method="post">
+                <div class="text"> 
+                    <label for="name">Nome:</label>
+                </div>
+                <div class="text"> 
+                    <input class="link" type="text" name="name" id="txt-name" />
+                </div>
+                <div class="text"> 
+                    <label for="shortName">Nome reduzido:</label>
+                </div>
+                <div class="text"> 
+                    <input class="link" type="text" name="shortName" id="txt-sName" />
+                </div>
+                <div class="text"> 
+                    <label for="description">Descrição:</label>
+                </div>
+                <div class="text"> 
+                    <input class="link" type="text" name="description" id="txt-desc" />
+                </div>
+                <!-- combobox -->
+                <div class="text"> 
+                    <label for="description">Responsável:</label>
+                </div>
+                <!-- <div class="text"> 
+                    <input class="link" type="text" name="description" id="txt-desc" /> -->
+                    <select id="cbx-resp">
+                        
+                        <option><%- list %></option>
+                        <!-- <option value="orange">Orange</option>
+                        <option value="pineapple">Pineapple</option>
+                        <option value="banana">Banana</option> -->
+                    </select>
+                <!-- </div> -->
+
+                <div class="text"> 
+                    <input type="button" onclick="fCadastro()" value="Cadastrar" />
+                    <input type="reset" value="Apagar">
+                </div>
+
+            </form>
+
+            <!-- Aparecer msg de cadastrado com sucesso ou erro -->
+            <div id="msg" class="msg-box hidden">
+                <a class="link2" href="/cadUser.html"> <span id="msg-span" ></span></a>
+            </div>
+            <!-- se der algum erro mantém na tela -->
+            <div id="snackbar" ><span id="msg-spanC" ></span></div>
+        </main>
+
+        <footer>
+            <h2><a href="/home.html" class="link2"><i class="fas fa-home"></i> Copyright 2021</a></h2>
+        </footer>
+    </body>
+</html>
+<!-- 
+<script>
+    $(document).ready(function()){
+        carregar_json('cbx-resp')
+        function carregar_json(name){
+            var html ='';
+            $.getJSON('/products', function(result)){
+                html += <option> Teste</option>;
+                console.log(result)
+            }
+        }
+    }
+</script> -->

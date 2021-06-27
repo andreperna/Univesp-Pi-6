@@ -1,3 +1,12 @@
+:root{
+--cor-header-footer: darkmagenta;
+--cor-button: thistle;
+--cor-fundo-button: white;
+--cor-button-text: #241D40;
+--cor-body: thistle;
+--cor-text-HF: whitesmoke ;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +15,19 @@
         "Helvetica Neue", sans-serif;
 }
 
+header a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 header {
-    background-color: darkmagenta;
+     background-color: var(--cor-header-footer); 
+    /* background-color: #6c5ce7;  */
     width: 100%;
     height: 3rem;
     display: flex;
@@ -15,21 +35,22 @@ header {
     justify-content: center;
     position: fixed;
     top: 0;
-    color: wheat;
-    box-shadow: 0 0 0.1em 0.05em;
+    color: var(--cor-text-HF);
+    /* box-shadow: 0 0 0.1em 0.05em; */
 }
 
 body {
-    background-color: thistle;
+    background-color: var(--cor-body);
     height: 100vh;
 }
 
 main {
-    background-color: white;
+    /* background-color: #aaa69d; */
+    background-color: var(--cor-fundo-button);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     max-width: 800px;
     margin: auto;
     padding-top: 4rem;
@@ -38,88 +59,100 @@ main {
 }
 
 footer {
-    background-color: darkmagenta;
+    /* background-color: #6c5ce7;
+    background-color: rgb(94, 4, 94); 
+     */
+    background-color: var(--cor-header-footer); 
+
     width: 100%;
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: wheat;
+    color: var(--cor-text-HF);
     position: fixed;
     bottom: 0;
-    box-shadow: 0 0 0.1em 0.05em;
-}
-
-section {
-    /* background-color: lightgray; */
-    min-width: 300px;
-    height: 300px;
-    margin: 1.5rem;
-    /* border-radius: 0.5rem; */
-    box-shadow: 0 0 0.1em;
-}
-
-.test {
-    /* background-color: lightgray; */
-    min-width: 400px;
-    height: 400px;
-    margin: 1.5rem;
-    /* border-radius: 0.5rem; */
-    box-shadow: 0 0 0.1em;
-}
-
-.verb {
-    width: 100%;
-    height: 15%;
-    background: thistle;
-    text-align: center;
-    line-height: 3rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    box-shadow: 0 0 0.1em 0.05em;
-}
-
-.verb1 {
-    width: 100%;
-    height: 10%;
-    /* background: rgb(243, 243, 243); */
-    text-align: center;
-    line-height: 3rem;
-    font-size: 1.5rem;
-    font-weight: bold;
     /* box-shadow: 0 0 0.1em 0.05em; */
 }
 
-form {
-    /* background-color: blueviolet; */
-    height: 85%;
-    padding: 1rem;
-    padding-top: 0.5rem;
-}
 
-label {
+.button {
+    width: 80%;
+    height: 10vh;
+    max-width: 500px;
+    background: var(--cor-button);
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px var(--cor-header-footer);
+    /* border: 3px dashed var(--cor-header-footer); */
+  }
+
+
+  .link{
+    /* border: 1px solid red; */
+    color: var(--cor-button-text);
+    text-align: center;
+    text-decoration: none;
     display: block;
-    margin-bottom: 0.25rem;
-}
-
-input {
     width: 100%;
-    height: 2rem;
-    margin-bottom: 0.25rem;
-}
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 
-input[type="submit"] {
-    background-color: thistle;
-    border: none;
-    box-shadow: 0 0 0.1em 0.05em;
-    margin-top: 1rem;
-}
+/*Abaixo criados para poder testar telas de cadastro */
+    .text {
+        width: 80%;
+        height: 10vh;
+        max-width: 500px;
+        /* background: var(--cor-button); */
+        text-align: left;
+        line-height: 10vh;
+        font-size: 1.2rem;
+        font-weight: bold;
+        /* box-shadow: 2px 2px 2px var(--cor-header-footer); */
+        /* border: 3px dashed var(--cor-header-footer); */
+    }
+    
+    /* não esta utilizando */
+    .buttonPag {
+        width: 40%;
+        height: 10vh;
+        max-width: 250;
+        background: var(--cor-button);
+        text-align: center;
+        line-height: 10vh;
+        font-size: 1.5rem;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px var(--cor-header-footer);
+        /* border: 3px dashed var(--cor-header-footer); */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    }
+    form {
+        /* background-color: blueviolet; */
+        height: 85%;
+        padding: 1rem;
+        padding-top: 0.5rem;
+    }
 
-ul {
-    padding: 2rem;
-    /* background-color: teal; */
-}
+    .link2{
+        color: var(--cor-text-HF);
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
 
-li {
-    margin: 1rem;
-}
+      .back-home {
+          text-decoration: none;
+          color: var(--cor-text-HF);
+      }

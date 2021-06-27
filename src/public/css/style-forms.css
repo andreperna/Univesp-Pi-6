@@ -1,0 +1,70 @@
+.container-form {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+}
+
+.container-inputs label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.container-inputs input {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-inputs select {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    height: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+    /* border: 1px solid red; */
+    margin-top: 4rem;
+}
+
+.container-buttons input {
+    border: none;
+    width: 48%;
+    background: var(--cor-button);
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px var(--cor-header-footer);
+    cursor: pointer;
+}
+
+.msg-box {
+    /* border: 1px solid red; */
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: lightgreen;
+    padding: 1rem;
+    font-weight: bold;
+    color: darkmagenta;
+    text-align: center;
+    transition-duration: 1s;
+}
+
+.msg-box.hidden {
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.msg-box.visible {
+    transform: translateX(-50%) translateY(150%);
+}
+
+.msg-box.error {
+    background-color: coral;
+}

@@ -23,13 +23,16 @@ app.get("/", (req, res)=>{
 app.use(express.static("./src/public"));
 
 //---------- Rotas API
-app.use("/products", require("./src/routes/productsRoute"));
+//app.use("/products", require("./src/routes/productsRoute"));
+app.use("/", require("./src/routes/index"));
+
 
 //---------- Rotas VIEWS
 const ejs = require('ejs')
 app.set('view engine', "ejs")
 app.set("views", "./views")
 app.use("/products-view", require("./src/routes/productsRouteView"));
+// app.use("/", require("./src/routes/indexView"));
 
 
 
