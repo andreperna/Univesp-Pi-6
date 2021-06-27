@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Local</title>
-    <script src="https://kit.fontawesome.com/7ffbd92234.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-forms.css">
-</head>
-<body>
-    <header><h1><a href="/home.html">Cadastrar Patrimônio</a></h1></header>
-    <div id="msg-box" class="msg-box hidden">
-        mensagem
-    </div>
-    <main>
-        <div class="container-form">
-            <form id="form" action="/assets" method="post">
-                <div class="container-inputs">
-                    <label for="productId">Produto:</label>
-                    <select id="cbx-prod"></select>
-                    <label for="locationId">Local:</label>
-                    <select id="cbx-loc"></select>
-                    <label for="aquisitionDate">Data de Aquisição:</label>
-                    <input class="link" type="date" name="description" id="txt-date" autocomplete="off"/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AWMcl-Cadastro</title>
+        <script src="https://kit.fontawesome.com/7ffbd92234.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/style-forms.css" />
+    </head>
+    <body>
+        <header>
+            <h1><a href="/home.html">Cadastrar Patrimônio</a></h1>
+        </header>
+        <div id="msg-box" class="msg-box hidden">mensagem</div>
+        <main>
+            <div class="container-form">
+                <form id="form" action="/assets" method="post">
+                    <div class="container-inputs">
+                        <label for="productId">Produto:</label>
+                        <select id="cbx-prod"></select>
+                        <label for="locationId">Local:</label>
+                        <select id="cbx-loc"></select>
+                        <label for="aquisitionDate">Data de Aquisição:</label>
+                        <input class="link" type="date" name="description" id="txt-date" autocomplete="off" />
+                    </div>
+                    <div class="container-buttons">
+                        <input type="button" onclick="fCadAss()" value="Cadastrar" />
+                        <input type="reset" value="Apagar" />
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <h2><a href="/home.html"> Copyright 2021</a></h2>
+        </footer>
 
-                </div>
-                <div class="container-buttons">
-                    <input type="button" onclick="fCadAss()" value="Cadastrar" />
-                    <input type="reset" value="Apagar">
-                </div>
-            </form>
-        </div>
-
-    </main>
-    <footer>
-        <h2><a href="/home.html"> Copyright 2021</a></h2>
-    </footer>
-
-    <script src="./js/functions.js"></script>
-    <script>
-        listLocations();
-        listProducts();
-    </script>
-</body>
+        <script src="./js/functions.js"></script>
+        <script>
+            listLocations();
+            listProducts();
+        </script>
+    </body>
 </html>

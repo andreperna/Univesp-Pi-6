@@ -12,19 +12,18 @@ Nesse tipo de banco de dados, cada registro é salvo num documento, em formato s
 O conjunto de documentos compõe uma coleção.
 Banco de Dados -> Coleções -> Documentos
 
-
 ## 1.3 MongoDB
 
 > MongoDB Atlas é o serviço de banco de dados em nuvem global para aplicativos modernos.  
 > Implante o MongoDB totalmente gerenciado em AWS, Google Cloud e Azure com a melhor automação e práticas comprovadas que garantem disponibilidade, escalabilidade e conformidade com os padrões de privacidade e segurança de dados mais exigentes.  
-<https://www.mongodb.com/cloud/atlas>
+> <https://www.mongodb.com/cloud/atlas>
 
 # 2. Routes
 
-## 2.1. BaseURL: xxxxx
+## 2.1. BaseURL: https://univesp-pi-6.mybluemix.net/
 
 | Method     | Endpoint (Path) | Action             |
-| ---------- | --------------  | ----------------   |
+| ---------- | --------------- | ------------------ |
 | ---------- | **users**       | ----------------   |
 | GET        | /users          | Read all users     |
 | GET        | /users/id       | Read user Id       |

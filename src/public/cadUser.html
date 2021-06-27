@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuários</title>
-    <script src="https://kit.fontawesome.com/7ffbd92234.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-forms.css">
-</head>
-<body>
-    <header><h1><a href="/home.html">Cadastrar Usuário</a></h1></header>
-    <div id="msg-box" class="msg-box hidden">
-        mensagem
-    </div>
-    <main>
-        <div class="container-form">
-            <form id="form" action="/users" method="post">
-                <div class="container-inputs">
-                    <label for="name">Nome:</label>
-                    <input class="link" type="text" name="name" id="txt-name" autocomplete="off"/>
-                    <label for="birthDate">Data de Nascimento:</label>
-                    <input class="link" type="date" name="birthDate" id="txt-birth" autocomplete="off"/>
-                    <label for="phone">Telefone:</label>
-                    <input class="link" type="text" name="phone" id="txt-phone" autocomplete="off"/>
-                </div>
-                <div class="container-buttons">
-                    <input type="button" onclick="fCadUser()" value="Cadastrar" />
-                    <input type="reset" value="Apagar">
-                </div>
-            </form>
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AWMcl-Cadastro</title>
+        <script src="https://kit.fontawesome.com/7ffbd92234.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/style-forms.css" />
+    </head>
+    <body>
+        <header>
+            <h1><a href="/home.html">Cadastrar Usuário</a></h1>
+        </header>
+        <div id="msg-box" class="msg-box hidden">mensagem</div>
+        <main>
+            <div class="container-form">
+                <form id="form" action="/users" method="post">
+                    <div class="container-inputs">
+                        <label for="name">Nome:</label>
+                        <input class="link" type="text" name="name" id="txt-name" autocomplete="off" />
+                        <label for="birthDate">Data de Nascimento:</label>
+                        <input class="link" type="date" name="birthDate" id="txt-birth" autocomplete="off" />
+                        <label for="phone">Telefone:</label>
+                        <input class="link" type="text" name="phone" id="txt-phone" autocomplete="off" />
+                    </div>
+                    <div class="container-buttons">
+                        <input type="button" onclick="fCadUser()" value="Cadastrar" />
+                        <input type="reset" value="Apagar" />
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <h2><a href="/home.html"> Copyright 2021</a></h2>
+        </footer>
 
-    </main>
-    <footer>
-        <h2><a href="/home.html"> Copyright 2021</a></h2>
-    </footer>
-
-    <script src="./js/functions.js"></script>
-</body>
+        <script src="./js/functions.js"></script>
+    </body>
 </html>
